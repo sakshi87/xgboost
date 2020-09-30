@@ -38,4 +38,5 @@ if [ ${TRAVIS_CPU_ARCH} == "arm64" ]; then
     conda install cmake
     sudo rm -rf /usr/local/cmake-3.10.2
     cmake --version
+    which cmake
 fi
