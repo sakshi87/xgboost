@@ -34,7 +34,7 @@ if [ ${TASK} == "python_sdist_test" ] && [ ${TRAVIS_OS_NAME} == "linux" ] && [ $
     cmake --version
 fi
 
-if [ ${TRAVIS_CPU_ARCH} == "aarch64" ]; then
+if [ ${TRAVIS_CPU_ARCH} == "arm64" ]; then
     conda install cmake
     cmake --version
 fi
