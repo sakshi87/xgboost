@@ -33,10 +33,3 @@ if [ ${TASK} == "python_sdist_test" ] && [ ${TRAVIS_OS_NAME} == "linux" ] && [ $
     sudo rm -rf /usr/local/cmake-3.12.4  # Remove existing CMake
     cmake --version
 fi
-
-if [ ${TRAVIS_CPU_ARCH} == "arm64" ]; then
-    conda install cmake
-    sudo rm -rf /usr/local/cmake-3.10.2
-    cmake --version
-    sudo mv /home/travis/miniconda/bin/cmake /usr/local
-fi
