@@ -9,7 +9,8 @@ if [ ${TASK} == "python_sdist_test" ]; then
 
     conda activate python3
     python --version
-    conda install numpy scipy
+    conda install numpy scipy cmake
+    cmake --version
 
     make pippack
     python -m pip install xgboost-*.tar.gz -v --user
