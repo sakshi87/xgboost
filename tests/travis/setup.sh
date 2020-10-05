@@ -32,4 +32,7 @@ if [ ${TASK} == "python_sdist_test" ] && [ ${TRAVIS_OS_NAME} == "linux" ] && [ $
     sudo bash cmake-3.17.1-Linux-x86_64.sh --prefix=/usr/local --skip-license
     sudo rm -rf /usr/local/cmake-3.12.4  # Remove existing CMake
     cmake --version
+elif [ ${TRAVIS_CPU_ARCH} == "arm64" ]; then
+        conda install cmake
+        cmake --version
 fi
