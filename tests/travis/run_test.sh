@@ -17,6 +17,9 @@ if [ ${TASK} == "python_sdist_test" ]; then
     make pippack
     python -m pip install xgboost-*.tar.gz -v --user
     python -c 'import xgboost' || exit -1
+    cd /home/travis/.cache/pip/wheels/9d/1b/e0/d6198acf928511235ca72b53ea68d315349cffb8f1429b438f/xgboost-1.3.0_SNAPSHOT-cp37-cp37m-linux_aarch64.whl
+    unzip xgboost-1.3.0_SNAPSHOT-cp37-cp37m-linux_aarch64.whl
+    ls
 fi
 
 if [ ${TASK} == "python_test" ]; then
